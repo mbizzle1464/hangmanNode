@@ -1,13 +1,19 @@
-//Random word is selected and exported
-var wordsToGuess = ["Pikachu", "Celebi", "Eevee", "Charizard", "Snorlax",
-                    "Mewtwo", "Rayquaza", "Ditto", "Charmander", "Bulbasaur",
-                     "Mew", "Gardevoir", "Squirtle", "Lucario", "Kyogre", "Dragonite", 
-                    "Jigglypuff", "Gengar", "Gyarados", "Arceus", "Salamence", "Umbreon",
-                    "Tyranitar", "Lugia", "Sylveon", "Metagross", "Milotic", "Blaziken", "Raichu", 
-                    "Magikarp", "Pichu", "Blastoise", "Espeon", "Aggron", "Lapras", "Flygon", 
-                    "Slowpoke", "Aron", "Koffing", "Jynx", "Ralts", "Feebas", "Mawile", "Mudkip",
-                    "Dratini", "Giratina", "Greninja", "Sceptile", "Vulpix" ],
-    randomIndex = Math.floor(Math.random() * wordsToGuess.length),
-    randomWord = wordsToGuess[randomIndex];
+var Word = require("./word.js");
 
-module.exports = randomWord;
+//Random word is selected and exported
+var Game = function() {
+    this.secretWords = ["pikachu", "celebi", "eevee", "charizard", "snorlax",
+        "mewtwo", "rayquaza", "ditto", "charmander", "bulbasaur",
+        "mew", "gardevoir", "squirtle", "lucario", "kyogre", "dragonite",
+        "jigglypuff", "gengar", "gyarados", "arceus", "salamence", "umbreon",
+        "tyranitar", "lugia", "sylveon", "metagross", "milotic", "blaziken", "raichu",
+        "magikarp", "pichu", "blastoise", "espeon", "aggron", "lapras", "flygon",
+        "slowpoke", "aron", "koffing", "jynx", "ralts", "feebas", "mawile", "mudkip",
+        "dratini", "giratina", "greninja", "sceptile", "vulpix"];
+    this.randomWord = this.secretWords[Math.floor(Math.random() * this.secretWords.length)];
+    this.currentWord = new Word(this.randomWord);   
+};
+
+    var hangMan = new Game();   
+
+module.exports = Game;
