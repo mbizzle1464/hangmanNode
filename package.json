@@ -1,0 +1,24 @@
+{
+  "name": "hangmannode",
+  "version": "1.0.0",
+  "description": "Hangman Node Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbizzle1464/hangmanNode.git"
+  },
+  "author": "Michael Bizzle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbizzle1464/hangmanNode/issues"
+  },
+  "homepage": "https://github.com/mbizzle1464/hangmanNode#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "npm": "^5.8.0",
+    "prompt": "^1.0.0"
+  }
+}
